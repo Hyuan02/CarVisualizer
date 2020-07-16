@@ -6,6 +6,7 @@ import { SelectorContainerComponent } from './selector-container/selector-contai
 import { CarSliderComponent } from './car-slider/car-slider.component';
 import { CarStatsComponent } from './car-stats/car-stats.component';
 import { FooterButtonsComponent } from './footer-buttons/footer-buttons.component';
+import { UnityViewerComponent } from './unity-viewer/unity-viewer.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { FooterButtonsComponent } from './footer-buttons/footer-buttons.componen
     SelectorContainerComponent,
     CarSliderComponent,
     CarStatsComponent,
-    FooterButtonsComponent
+    FooterButtonsComponent,
+    UnityViewerComponent
   ],
   imports: [
     BrowserModule

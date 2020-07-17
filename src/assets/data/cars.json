@@ -1,0 +1,8 @@
+{
+    "cars":[
+        {"name": "Veyron3000", "logo":"assets/icons/Icon01", "color":"none", "topSpeed":87.7, "acceleration": 40.5, "handling": 47.7},
+        {"name": "PureMuscle", "logo":"assets/icons/Icon02","color":"none", "topSpeed":55.7, "acceleration": 69.5, "handling": 72.7},
+        {"name": "ClassicOne", "logo":"assets/icons/Icon03","color":"none", "topSpeed":49.7, "acceleration": 35.5, "handling": 53.7},
+        {"name": "Dude2", "logo":"assets/icons/Icon04", "color":"none", "topSpeed":90.7, "acceleration": 80.5, "handling": 37.7}
+    ]
+}

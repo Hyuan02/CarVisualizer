@@ -5,7 +5,7 @@
         </span>
         <div class="actualStats">
             <div class="statsContainerBar">
-                <div class="statsFill">
+                <div class="statsFill" [ngStyle]="{'width': acceleration + '%'}">
                     <div class="statsThumb">
 
                     </div>
@@ -19,7 +19,7 @@
         </span>
         <div class="actualStats">
             <div class="statsContainerBar">
-                <div class="statsFill">
+                <div class="statsFill" [ngStyle]="{'width': topSpeed + '%'}">
                     <div class="statsThumb">
 
                     </div>
@@ -33,7 +33,7 @@
         </span>
         <div class="actualStats">
             <div class="statsContainerBar">
-                <div class="statsFill">
+                <div class="statsFill" [ngStyle]="{'width': handling + '%'}">
                     <div class="statsThumb">
 
                     </div>

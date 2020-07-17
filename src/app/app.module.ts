@@ -7,6 +7,8 @@ import { CarSliderComponent } from './car-slider/car-slider.component';
 import { CarStatsComponent } from './car-stats/car-stats.component';
 import { FooterButtonsComponent } from './footer-buttons/footer-buttons.component';
 import { UnityViewerComponent } from './unity-viewer/unity-viewer.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { UnityViewerComponent } from './unity-viewer/unity-viewer.component';
     UnityViewerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

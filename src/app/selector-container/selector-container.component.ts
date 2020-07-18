@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CarsService} from '../services/cars.service';
 import {Car, CarsData} from '../models/car';
+import { UnityService } from '../services/unity.service';
 
 @Component({
   selector: 'selector-container',
@@ -14,7 +15,7 @@ export class SelectorContainerComponent implements OnInit {
   public actualIndex: number = 0;
 
   public isLoaded: boolean = false
-  constructor(private carsService: CarsService) { 
+  constructor(private carsService: CarsService, private unityService: UnityService) { 
     this.carsService.getCars().subscribe((data: CarsData)=>{
       this.carsArray = data.cars;
       this.isLoaded = true;
@@ -28,12 +29,18 @@ export class SelectorContainerComponent implements OnInit {
   goNext(){
     if(this.actualIndex < this.carsArray.length-1){
       this.actualIndex++
+      this.unityService.changeCar(this.actualIndex);
     }
   }
 
   goPrevious(){
     if(this.actualIndex > 0){
       this.actualIndex--
+      this.unityService.changeCar(this.actualIndex);
     }
+  }
+
+  changeColor(colorValue: string){
+    this.carsArray[this.actualIndex].color = colorValue;
   }
 }

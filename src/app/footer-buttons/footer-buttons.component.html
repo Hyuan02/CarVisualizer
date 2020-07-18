@@ -5,17 +5,19 @@
         </span>
     </div>
     <div class="buttons-container">
-        <button class="footer-buttons">
-            function
+        <div class="footer-colors">
+            <button class="square-colors" *ngFor="let item of colors" (click)="changeColor(item)" [ngStyle]="{'background-color': item}" [ngClass]="{'selected': currentColor == item}">
+            </button>
+        </div>
+        <button class="footer-buttons" (click)="takeScreenshot()">
+            Take Screenshot
         </button>
         <button class="footer-buttons">
-            function
+            Add Image
         </button>
         <button class="footer-buttons">
-            function
+            Save Cars
         </button>
-        <button class="footer-buttons">
-            function
-        </button>
+        <input type="file" hidden #fileInput>
     </div>
 </section>

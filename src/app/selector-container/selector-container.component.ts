@@ -16,7 +16,7 @@ export class SelectorContainerComponent implements OnInit {
 
   public isLoaded: boolean = false
   constructor(private carsService: CarsService, private unityService: UnityService) {
-      this.carsService.getCars().then((response)=>{
+      this.carsService.getCars().then((response: CarsData)=>{
           this.carsArray = response.cars;
           this.unityService.loaded.subscribe((res)=>{
             this.unityService.initRoutine(JSON.stringify(response));

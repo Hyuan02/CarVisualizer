@@ -2,11 +2,11 @@
 
 </div>
 <div class="centeredContainer">
-    <div class="ownContainer" [hidden]="!isLoaded">
-        <car-slider [length]="carsArray.length" [srcImg]="carsArray[actualIndex].logo" [carName]="carsArray[actualIndex].name" [index]="actualIndex" (incrementIndex)="goNext()" (decrementIndex)="goPrevious()"></car-slider>
-        <unity-viewer></unity-viewer>
-        <car-stats [acceleration]="carsArray[actualIndex].acceleration" [topSpeed]="carsArray[actualIndex].topSpeed" [handling]="carsArray[actualIndex].handling"></car-stats>
-        <footer-buttons (colorEmitter)="changeColor($event)" [currentColor]="carsArray[actualIndex].color" (carSave)="saveCars($event)" (imageEmitter)="saveImage($event)"></footer-buttons>
+    <div class="ownContainer">
+        <car-slider *ngIf="isLoaded" [length]="carsArray.length" [srcImg]="carsArray[actualIndex].logo" [carName]="carsArray[actualIndex].name" [index]="actualIndex" (incrementIndex)="goNext()" (decrementIndex)="goPrevious()"></car-slider>
+        <unity-viewer [hidden]="!isLoaded"></unity-viewer>
+        <car-stats *ngIf="isLoaded" [acceleration]="carsArray[actualIndex].acceleration" [topSpeed]="carsArray[actualIndex].topSpeed" [handling]="carsArray[actualIndex].handling"></car-stats>
+        <footer-buttons *ngIf="isLoaded" (colorEmitter)="changeColor($event)" [currentColor]="carsArray[actualIndex].color" (carSave)="saveCars($event)" (imageEmitter)="saveImage($event)"></footer-buttons>
     </div>
 </div>
 

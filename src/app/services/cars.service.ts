@@ -13,17 +13,21 @@ export class CarsService {
   constructor(private httpClient: HttpClient) { 
   }
 
-  public async getCars(){
-      const response = await this.OpenCache();
-      if(!isUndefined(response)){
-        return await response.json();
-      }
-      else{
-        this.httpClient.get('assets/data/cars.json', {withCredentials: true}).subscribe(response=>{
-          return response;
-        });
-      }
-      
+  public getCars(){
+     return new Promise((resolve,reject)=>{
+         this.OpenCache().then(response=>{
+          if(!isUndefined(response)){
+            response.json().then((res)=>{
+              resolve(res);
+            });
+          }
+          else{
+            this.httpClient.get('assets/data/cars.json', {withCredentials: true}).subscribe(res=>{
+              resolve(res);
+            });
+          }
+         });
+      })
   }
 
   public uploadCars(cars: CarsData){

@@ -9,4 +9,5 @@ export interface Car{
     topSpeed: number
     acceleration: number
     handling: number
+    image: string
 }

@@ -15,15 +15,17 @@ export class SelectorContainerComponent implements OnInit {
   public actualIndex: number = 0;
 
   public isLoaded: boolean = false
-  constructor(private carsService: CarsService, private unityService: UnityService) { 
-    this.carsService.getCars().subscribe((data: CarsData)=>{
-      this.carsArray = data.cars;
-      this.isLoaded = true;
-    });
+  constructor(private carsService: CarsService, private unityService: UnityService) {
+      this.carsService.getCars().then((response)=>{
+          this.carsArray = response.cars;
+          this.unityService.loaded.subscribe((res)=>{
+            this.unityService.initRoutine(JSON.stringify(response));
+            this.isLoaded = true;
+          });
+      });
   }
 
   ngOnInit() {
-     
   }
 
   goNext(){
@@ -42,5 +44,14 @@ export class SelectorContainerComponent implements OnInit {
 
   changeColor(colorValue: string){
     this.carsArray[this.actualIndex].color = colorValue;
+  }
+
+  saveCars(value: string){
+    this.carsService.uploadCars({cars: this.carsArray});
+  }
+
+  public saveImage(image: File){
+    this.carsArray[this.actualIndex].image = "\\" + image.name;
+    this.carsService.uploadImage(image);
   }
 }

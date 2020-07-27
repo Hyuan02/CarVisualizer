@@ -12,12 +12,12 @@
         <button class="footer-buttons" (click)="takeScreenshot()">
             Take Screenshot
         </button>
-        <button class="footer-buttons">
+        <button class="footer-buttons" (click)="triggerFileInput()">
             Add Image
         </button>
-        <button class="footer-buttons">
+        <button class="footer-buttons" (click)="saveCars()">
             Save Cars
         </button>
-        <input type="file" hidden #fileInput>
+        <input type="file" hidden #fileInput (change)="uploadFile($event)">
     </div>
 </section>

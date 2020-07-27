@@ -68,10 +68,15 @@ export class UnityService {
   }
 
   loadFlag(){
+    console.log("called load flag")
     this.loaded.next(true);
   }
 
   private setUrlFromImage(url: string){
     this.unityInstance.SendMessage('ServiceController', 'SetUrlImage', url);
+  }
+
+  secondLoadFlag(){
+    this.loaded.next(true);
   }
 }

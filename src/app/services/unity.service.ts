@@ -36,7 +36,7 @@ export class UnityService {
   }
 
   changeColor(color:string){
-    this.unityInstance.SendMessage('ServiceController', 'ChangeWindowColor', color);
+    this.unityInstance.SendMessage('ServiceController', 'ChangeColor', color);
   }
 
   takeScreenshot(){

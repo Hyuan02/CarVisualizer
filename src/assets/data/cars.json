@@ -1,8 +1,6 @@
 {
     "cars":[
-        {"name": "Veyron3000", "logo":"assets/icons/Icon1.svg", "color":"none", "topSpeed":87.7, "acceleration": 40.5, "handling": 47.7 ,"image":""},
-        {"name": "PureMuscle", "logo":"assets/icons/Icon2.svg","color":"none", "topSpeed":55.7, "acceleration": 69.5, "handling": 72.7,"image":""},
-        {"name": "ClassicOne", "logo":"assets/icons/Icon3.svg","color":"none", "topSpeed":49.7, "acceleration": 35.5, "handling": 53.7,"image":""},
-        {"name": "Dude2", "logo":"assets/icons/Icon4.svg", "color":"none", "topSpeed":90.7, "acceleration": 80.5, "handling": 37.7,"image":""}
+        {"name": "Veyron1988", "logo":"assets/icons/Icon1.svg", "color":"none", "topSpeed":87.7, "acceleration": 40.5, "handling": 47.7 ,"image":""},
+        {"name": "ClassicOne", "logo":"assets/icons/Icon3.svg","color":"none", "topSpeed":49.7, "acceleration": 35.5, "handling": 53.7,"image":""}
     ]
 }

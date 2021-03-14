@@ -35,7 +35,7 @@ export class SelectorContainerComponent implements OnInit {
   goNext(){
     if(this.actualIndex < this.carsArray.length-1){
       this.actualIndex++
-      this.unityService.changeCar(this.actualIndex);
+      this.unityService.changeCar(1);
     }
   }
 

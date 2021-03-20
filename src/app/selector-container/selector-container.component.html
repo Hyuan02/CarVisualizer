@@ -3,7 +3,7 @@
 </div>
 <div class="centeredContainer">
     <div class="ownContainer">
-        <car-slider *ngIf="isLoaded" [length]="carsArray.length" [srcImg]="carsArray[actualIndex].logo" [carName]="carsArray[actualIndex].name" [index]="actualIndex" (incrementIndex)="goNext()" (decrementIndex)="goPrevious()"></car-slider>
+        <car-slider *ngIf="isLoaded" [length]="carsArray.length" [srcImg]="carsArray[actualIndex].logo" [carName]="carsArray[actualIndex].name" [carFont]="carsArray[actualIndex].font"[index]="actualIndex" (incrementIndex)="goNext()" (decrementIndex)="goPrevious()"></car-slider>
         <unity-viewer [hidden]="!isLoaded"></unity-viewer>
         <car-stats *ngIf="isLoaded" [acceleration]="carsArray[actualIndex].acceleration" [topSpeed]="carsArray[actualIndex].topSpeed" [handling]="carsArray[actualIndex].handling"></car-stats>
         <footer-buttons *ngIf="isLoaded" (colorEmitter)="changeColor($event)" [currentColor]="carsArray[actualIndex].color" (carSave)="saveCars($event)" (imageEmitter)="saveImage($event)"></footer-buttons>

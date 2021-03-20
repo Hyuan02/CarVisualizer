@@ -22,7 +22,7 @@
                 <img style="max-width: 100px; max-height: 50px;" [src]="srcImg" alt="">
             </div>
             <div class="car-title">
-                <span>
+                <span [ngStyle]="{'font-family': carFont}">
                     {{carName}}
                 </span>
             </div>

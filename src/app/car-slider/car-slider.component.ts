@@ -11,6 +11,7 @@ export class CarSliderComponent implements OnInit {
   @Input() srcImg: string;
   @Input() carName: string;
   @Input() index: number;
+  @Input() carFont: string;
 
 
   @Output() incrementIndex = new EventEmitter();

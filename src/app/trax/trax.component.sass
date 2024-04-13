@@ -1,0 +1,95 @@
+@keyframes bounce-in
+    0%
+        display: block
+        opacity: 0
+        transform: scale(.3)
+        width: 10%
+    20%
+        display: block
+        opacity: 1
+        transform: scale(1.05)
+        width: 10%
+    30%
+        display: block
+        opacity: 1
+        transform: scale(.9)
+        width: 10%
+    40%
+        display: block
+        opacity: 1
+        transform: scale(1)
+        width: 10%
+    60%
+        display: block
+        opacity: 1
+        width: 75%
+    80%
+        display: block
+        opacity: 1
+        width: 75%
+    100%
+        display: block
+        opacity: 1
+        width: 75%
+@keyframes content-animation
+    0%
+        opacity: 0
+    60%
+        opacity: 1
+    100%
+        opacity: 0
+
+.trax-container
+    background: #000000af
+    color: #fff
+    font-family: sans-serif
+    font-style: italic
+    border: solid 2px #c9f097
+    border-radius: 10px
+    border-bottom-left-radius: 100px
+    border-top-left-radius: 100px
+    border-bottom-right-radius: 30px
+    border-top-right-radius: 30px
+    position: relative
+    width: 75%
+    height: 62px
+    opacity: 0
+    .logo
+        position: absolute
+        left: 0px
+        top: 0
+        width: 78px
+        height: 100%
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: bold
+        background-color: white
+        color: blue
+        border: thick 4px #ccc
+    .billboard
+        margin-left: 80px
+    .tag
+        position: absolute
+        right: 0
+        border: solid 2px #c9f097
+        border-bottom: none
+        padding: 0rem 0.4rem
+        transform: rotateZ(90deg) translateX(-85%) translateY(-1.8rem)
+        font-size: 0.6rem
+h3,h6
+    font-weight: 200
+    margin-block-start: 0.2rem
+    margin-block-end: 0.2rem
+
+.bounce-in
+    animation: bounce-in 4s ease-in-out
+    animation-fill-mode: backwards
+    animation-direction: alternate
+    animation-iteration-count: 2
+.content
+    animation: content-animation 4s step-end
+    animation-fill-mode: backwards
+    animation-direction: alternate
+    animation-iteration-count: 2

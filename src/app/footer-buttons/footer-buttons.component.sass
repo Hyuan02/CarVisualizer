@@ -1,3 +1,34 @@
+@keyframes fadeInUp
+    0%
+        transform: translateY(100%)
+        opacity: 0
+    20%
+        transform: translateY(0%)
+        opacity: 1
+    40%
+        transform: translateY(0%)
+        opacity: 1
+    60%
+        transform: translateY(100%)
+        opacity: 0
+    80%
+        transform: translateY(0%)
+        opacity: 1
+    100%
+        transform: translateY(100%)
+        opacity: 0
+@keyframes changeText
+    0%
+        content: ""
+    20%
+        content: "By Hyuan02"
+    40%
+        content: "By Hyuan02"
+    90%
+        content: "hyuan02.github.io"
+    100%
+        content: "hyuan02.github.io"
+
 .footer-container
     width: 100%
     height: 70px
@@ -20,7 +51,7 @@
             color: white
     .buttons-container
         background: #000000af
-        margin:0px 5px
+        margin: 0px 5px
         border-radius: 10px
         width: 80%
         height: 100%
@@ -30,7 +61,7 @@
         padding: 5px 0px
         .footer-buttons
             width: 30%
-            height:45%
+            height: 45%
             margin: 2px 1%
             background: transparent
             border: solid 2px #8a8a88
@@ -43,6 +74,11 @@
             align-items: center
             font-weight: 500
             font-size: 16px
+            transition: 0.5s
+            cursor: pointer
+            &:hover
+                border-color: #62af21Af !important
+
         .footer-colors
             width: 30%
             display: flex
@@ -53,5 +89,18 @@
                 height: 60%
                 border: solid 2px #8a8a88
                 border-radius: 5px
+                cursor: pointer
+                transition: 0.5s
 .selected
     border-color: #62af21Af !important
+.fade-in-up
+    content: ""
+    animation: 6s fadeInUp
+    animation-iteration-count: infinite
+    animation-fill-mode: none
+
+    &::after
+        content: ""
+        animation: 6s changeText
+        animation-iteration-count: infinite
+        animation-fill-mode: none
